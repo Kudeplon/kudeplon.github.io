@@ -1,0 +1,762 @@
+/* Paramètres de polices du site internet */
+@font-face 
+{
+    font-family: 'Raleway-Light';
+    src: url(Polices/Raleway-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'Raleway-ExtraBold';
+    src: url(Polices/Raleway-ExtraBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'Raleway-Bold';
+    src: url(Polices/Raleway-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Paramètres du Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header, main {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*Paramètres du logo Booki. */
+
+#logo img {
+    width: 97px;
+    margin: 20px 0;
+}
+
+/* Paramètres de la navigation en haut a droite. */
+
+nav {
+    height: 90px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: -8px;
+    height: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-top: 3px #f2f2f2 solid;
+    
+}
+
+nav ul li:hover {
+    border-color: #0065FC;
+
+}
+
+/*Barre de recherche*/
+
+#searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    padding: 0;
+    max-width: 35%;
+    min-width: 400px;
+}
+
+.fas.fa-map-marker-alt {
+    height: 60px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 0;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    box-sizing: border-box;
+}
+
+#search {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border-top: 2px #f2f2f2 solid;
+    border-bottom: 2px #f2f2f2 solid;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box;
+}
+
+/*Bouton Rechercher*/
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+    padding: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 300ms ease;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button .fas.fa-search {
+    display: none;
+}
+
+/* Paramètres des filtres*/
+
+#filtres {
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.filtre {
+    display: flex;
+    height: 50px;
+    border: 2px #d9d9d9 solid;
+    border-left: transparent;
+    border-radius: 25px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 300ms ease;
+    box-sizing: border-box;
+}
+
+#filtres span {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 0;
+    font-family: 'Raleway-Bold';
+}
+
+.filtre:hover {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    border: 2px #0065FC solid;
+    border-left: transparent;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    min-width: 50px;
+    background-color: #d3e2f9;
+    color: #0065FC;
+    border-radius: 50%;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+/* Résultat des recherche et point informations */
+
+#resultat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cercle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    min-width: 40px;
+    border: 2px #d9d9d9 solid;
+    border-radius: 50%;
+}
+
+#resultat i {
+    color: #0065FC;
+}
+
+#resultat p {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+/* partie des Hébergements à Marseille*/
+
+#resultat_recommendations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#resultat_recommendations > h2 {
+    display: none;
+}
+
+#liste_hebergements {
+    width: 65%;
+}
+
+#liste_hebergements {
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding-bottom: 30px;
+}
+
+#cartes_hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#cartes_hebergements .carte_hebergements {
+    height: 100%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 25px;
+    box-sizing: border-box;
+    filter: drop-shadow(5px 5px 5px grey);
+}
+
+.carte_hebergements img {
+    width: 100%;
+    height: 120px;
+    border-radius: 25px 25px 0px 0px;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.description_hebergements .note {
+    padding: 10px;
+}
+
+.note {
+    font-size: 10px;
+}
+
+.fas.fa-star.bleu {
+    color: #0065FC;
+}
+
+.fas.fa-star.grise {
+    color: #d9d9d9;
+}
+
+.description_hebergements h3, .description_hebergements p {
+    /* margin: 0; */
+    margin: 0 5px 5px;
+}
+
+#cartes_hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#titre_hebergements, #cartes_hebergements, #liste_hebergements > p {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#titre_hebergements > h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#liste_hebergements a {
+    width: 31%;
+    margin-bottom: 30px;
+   
+}
+
+#liste_hebergements .plus {
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: 'Raleway-Bold';
+}
+
+/* Parties concernant Les plus populaires */
+
+aside{
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    width: 33%;
+}
+
+#titre_aside {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#titre_aside i {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+#plus_populaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+    
+
+}
+
+.populaire {
+    display: flex;
+    height: 160px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(5px 5px 5px grey);
+    margin-bottom: 30px;
+    
+}
+
+.populaire img {
+    height: 150px;
+    width: 127px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.description_populaire {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+/* Paramètres des activités*/
+
+#activites {
+    margin-top: 50px;
+}
+
+.liste_activites {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.column {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+.liste_activites article {
+    height: 100%;
+    border-radius: 25px;
+    height: 100%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 25px;
+    box-sizing: border-box;
+    filter: drop-shadow(5px 5px 5px grey);
+}
+
+.liste_activites img {
+    width: 100%;
+    height: calc(100% - 70px);
+    object-fit: cover;
+    border-radius: 25px 25px 0px 0px;
+}
+
+#carte2 {
+    height: 55%;
+}
+
+
+#carte3 {
+    height: 40%;
+}
+
+#carte5 {
+    height: 45%;
+}
+
+#carte6 {
+    height: 50%;
+}
+
+.liste_activites h3 {
+    padding: 21px;
+    margin: 0;
+}
+
+/* Paramètre Pour le design du Body */
+body 
+{
+    font-family:'Raleway-Light', "Arial Black", sans-serif;
+}
+
+/* Paramètres du footer */
+
+footer {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+#container-flex {
+    max-width: 1440px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.informations {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.informations ul {
+    margin-bottom: 10px;
+}
+
+.informations ul li {
+    padding-bottom: 10px;
+}
+
+/* Esthétiques des listes */
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+
+/* Esthétique des titres */ 
+h1, h2, h3, h4
+{
+    font-family:'Raleway-Bold', sans-serif;
+    font-size: 20px;
+}
+
+/* Esthétique des liens de la pages */
+a 
+{
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+}
+
+a:hover {
+    color: #0065FC;
+}
+/* Media Queries et Responsive */
+
+/* Media du header */
+
+@media screen and (max-width: 992px)
+{ 
+    header
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    }
+}
+
+/* Media du nav */
+
+@media screen and (max-width: 992px)
+{
+    nav 
+    {
+    width: 100%;
+    height: 50px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    nav ul 
+    {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    nav ul li {
+    margin: 0;
+    width: 50%;
+    text-align: center;
+    border-bottom: 3px #d9d9d9 solid;
+    border-top: none;
+    }
+}
+    
+
+@media screen and (max-width: 992px)
+{
+    nav ul li:hover {
+    border-bottom: 3px #0065FC solid;
+    border-top: 3px #d9d9d9 transparent;
+    }
+}
+/* Media du main */
+
+@media screen and (max-width: 992px)
+{
+    main 
+    {
+    width: 100%;
+    margin: 0 auto;
+    }
+}
+
+/* Media des filtres et de la barre de recherche */ 
+
+@media screen and (max-width: 992px)
+{
+    #form_content
+    {
+    width: 90%;
+    margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    #searchbar 
+    {
+    max-width: 40%;
+    min-width: 95%;
+    margin: 0 auto;
+    position: relative;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    button 
+    {
+    display: block;
+    background-color: #0065FC;
+    padding: 18px;
+    border: none;
+    border-radius: 15px 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    button .fas.fa-search 
+    {
+    display: inline;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    button span 
+    {
+    display: none;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    #filtres h2 
+    {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .filtre 
+    {
+    margin-left: 0;
+    margin-right: 10px;
+    }
+}
+
+/* Media de la section hebergements */
+
+@media screen and (max-width: 992px)
+{
+    #resultat_recommendations
+    {
+    display: flex;
+    flex-direction: column-reverse; 
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    
+    #liste_hebergements
+    {
+    width: 100%;
+    background-color: white;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    #cartes_hebergements a 
+    {
+    min-width: 100%;
+    margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    #cartes_hebergements 
+    {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    }
+}
+
+/* Media de la section les plus populaires */
+
+@media screen and (max-width: 992px)
+{
+    aside
+    {
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    }
+}
+
+/* Media pour les activites */
+
+@media screen and (max-width: 992px)
+{
+    #activites
+    {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .liste_activites
+    {
+    display: flex;
+    flex-direction: column;
+    height: 1300px;
+    }
+} 
+
+/* Media des colonnes */
+
+@media screen and (max-width: 992px)
+{
+    .column.simple 
+    {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .column.double
+    {
+    height: 30%;
+    margin-bottom: 40px;
+    width: 100%;
+    }
+}
+
+/* Media du footer */
+
+@media screen and (max-width: 992px)
+{
+    #container-flex 
+    {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .informations
+    {
+    padding-top: 20px;
+    margin: 0 auto;
+    }
+}
